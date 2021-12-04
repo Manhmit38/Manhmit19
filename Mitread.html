@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIts Lib</title>
+    <link rel="stylesheet" href="/Mitread.css">
+    <script src="./Mitread.js" defer></script>
+    <script src="http://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="tasktop">
+        <div class="logo">
+            <a href="#"><i class="fa fa-book fa-4x"></i></a>
+        </div>
+        <div class="tim">
+            <input type="text" placeholder="Bạn muốn đọc sách gì...">
+            <a href="#"><i class="fa fa-search fa-3x"></i></a>
+        </div>
+        <div class="mainmenu">
+            <div class="buton">
+                <div class="ch">
+                    <span>Mua</span>
+                </div>
+                <a href="#"><i class="fa fa-shopping-bag fa-3x"></i></a>
+            </div>
+        </div>
+        <div class="buton">
+            <div class="ch">
+                <span>Tin</span>
+            </div>
+            <a href="#"><i class="fa fa-bell-o fa-3x"></i></a>
+        </div>
+        <div class="buton">
+            <div class="ch">
+                <span>Acc</span>
+            </div>
+            <a href="#"><i class="fa fa-user-o fa-3x"></i></a>
+        </div>
+    </div>
+    <button id="prev-btn"  onclick="audio.play();">
+        <i class="fas fa-arrow-circle-left"></i>
+    </button>
+    <script type="text/javascript">
+        const audio = new Audio();
+        audio.src ="/openbook.mp3"
+    </script>
+    <!-- book -->
+    <div id="book" class="book">
+        <!-- paper -->
+        <div id="p1" class="paper ">
+            <div class="front">
+                <div id="f1" class="front-content">
+                    <h1>Front1</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b1" class="back-content">
+                    <h1>Back1</h1>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="p2" class="paper">
+            <div class="front">
+                <div id="2" class="front-content">
+                    <h1>Front2</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b2" class="back-content">
+                    <h1>Back2</h1>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="p3" class="paper">
+            <div class="front">
+                <div id="f3" class="front-content">
+                    <h1>Front3</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b3" class="back-content">
+                    <h1>Back3</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <button id="next-btn" onclick="audio.play()">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
+    <button id="btn" onclick="audio.play();"></button>
+    <script type="text/javascript">
+        const audio = new Audio();
+        audio.src ="/haha.mp3"
+    </script>
+</body>
+</html>

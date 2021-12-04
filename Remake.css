@@ -1,0 +1,723 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#particles-js{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(/bgp.jpg);
+    height: 125vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+.tasktop{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 4;
+}
+.logo .fa-book{
+    color: #fff;
+    font-size: 150px;
+    margin: 35px 0 0 50px;
+    transform-style: preserve-3d;
+    animation: rotatee 6s linear infinite;
+}
+@keyframes rotatee{
+    0%{
+        transform: perspective(1000px) rotatey(0deg);
+    }
+    25%{
+        transform: perspective(1000px) rotatey(30deg);
+    }
+    50%{
+        transform: perspective(1000px) rotatey(0deg);
+    }
+    75%{
+        transform: perspective(1000px) rotatey(-30deg);
+    }
+    100%{
+        transform: perspective(1000px) rotatey(0deg);
+    }
+}
+.logo .fa-book:hover{
+    color: antiquewhite;
+}
+.tim{
+    margin: 10px auto;
+    background: rgba(80, 75, 75, 0.75);
+    height: 80px;
+    width: 500px;
+    border-radius: 30px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.8s;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.4);
+}
+.tim i{
+    color: #fff;
+}
+.tim:hover input{
+    width: 480px;
+}
+.tim input{
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 35px;
+    transition: 0.8s;
+}
+.buton span{
+    position: relative;
+    color: rgba(0,0,0,0);
+    margin-left: 11px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.buton i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    color: #fff;
+}
+.buton i:hover{
+    color: gray;
+}
+.buton{
+    height: 27px;
+    width: 70px;
+    margin-right:70px ;
+    margin-bottom: 50px;
+    color: rgba(0,0,0,0);
+    background:rgba(0,0,0,0);
+    border-radius:  15px;
+}
+.buton:hover{
+
+    color: black;
+    background:rgba(252,252,252,0.712);
+}
+.buton:hover span{
+    color: black;
+}
+
+
+
+
+
+
+    /* content */
+    .content{
+        color: #fff;
+        position: absolute;
+        margin:300px 0 0 1150px;
+    }
+    .content h1{
+        display: flex;
+        margin: 75px 0 0 5px;
+        font-size: 100px;
+        line-height: 160px;
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+        background:url(/Mau-den-va-trang-nen-do-hoa-soc.jpg);
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 20s linear infinite;
+    }
+    @keyframes back{
+        100%{
+            background-position: 2000px 0;
+        }
+    }
+    .sh{
+        color:gray;
+        font-size: 90px;
+        font-weight: 400;
+    }
+    .sh:hover{
+        color: wheat;
+    }
+    .dy{
+        margin-left: 75px;
+        height: 70px;
+        line-height: 70px;
+        overflow: hidden;
+    }
+    .dy li{
+        list-style: none;
+        font-size: 70px;
+        margin-top: 6px;
+        margin-left: 200px;
+        top: 0;
+        position: relative;
+        animation:slide 6s steps(4) infinite;
+    }
+    @keyframes slide{
+        100%{
+            top: -300px;
+            
+        }
+    }
+    .dy li span{
+        position: relative;
+    }
+    .dy li span::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,0.4);
+        animation:typing 1.5s steps(10) infinite;
+    }
+    @keyframes typing{
+        100%{
+            left:100%;
+            margin: 0 -35px 0 35px;
+        }
+    }
+
+
+
+
+    /* slider */
+.slider{
+    position: absolute;
+    margin: 28%  43%;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 9s linear infinite;
+}
+.slider:hover{
+    animation-play-state: paused;
+}
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*60deg)) translateZ(350px);
+}
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:270px;
+    height: 430px;
+    border-radius: 25px;
+    object-fit: cover;
+    transition: 2s;
+}
+.slider span:hover img{
+    transform: translateY(-5px) scale(1.2);
+}
+
+
+/* ___ */
+.hi{
+    position: absolute;
+    width: 325px;
+    height: 440px;
+    margin:-49px 0 0 -27px;
+    font-size: "Quicksand", sans-serif;
+    background:linear-gradient(rgba(0,0,0,0.9), rgba(17, 19, 17, 0.137));
+    border-radius: 5px;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    z-index: 3;
+}
+.hi:hover{
+    opacity: 1;
+    /* transform: scale(1.2); */
+}
+.hi h2{
+    color: wheat;
+    margin-bottom: 70px;
+}
+.hi .fa-heart-o:hover{
+    color:rgb(145, 84, 84);
+}
+.hi h4{
+    font-size: 20px;
+    color: rgb(190, 177, 177);
+    margin-bottom: 70px;
+}
+#ikon{
+    margin: 10px 0 0 14px;
+}
+button{
+    display: inline;
+    font-size: 10px;
+    width: 75px;
+    height: 40px;
+    margin:90px 0 0 21px;
+    text-align: center;
+    /* margin: 15px 8px; */
+    border-radius: 25px;
+    font-weight: bold;
+    border: 4px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;   
+    position: relative;
+    /* overflow: hidden; */
+}
+button:hover{
+    background: #009688;
+    border-color:none
+}
+
+
+
+.sd{
+    height: 100px;
+    width: 70px;
+    border: 6px solid #fff;
+    position: absolute;
+    left: 38%;
+    /* bottom: ; */
+    border-radius: 50px;
+    cursor: pointer;
+}
+.sd::before,
+.sd::after{
+    content: '';
+    position: absolute;
+    margin-top: 15px;
+    top: 50%;
+    left:48%;
+    border: 6px solid #fff;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%,-100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: sd 1s ease-in-out infinite;
+    z-index: 4;
+}
+.sd::after{
+    top :30%;
+    animation-delay: .3s;
+}
+@keyframes sd{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+        /* page2 */
+    
+        #paget{
+            background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url(/bgp2.jpg);
+            height: 130vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+        }
+        .contentt{
+            position: absolute;
+            color: #fff;
+        }
+        .contentt h1{
+            display: flex;
+            margin: 75px 0 0 5px;
+            font-size: 100px;
+            line-height: 160px;
+            color: transparent;
+            -webkit-text-stroke: 1px #fff;
+            background:url(/Mau-den-va-trang-nen-do-hoa-soc.jpg);
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: backt 20s linear infinite;
+        }
+        @keyframes backt{
+            100%{
+                background-position: 2000px 0;
+            }
+        }
+        
+        .trend h1{
+            margin-top: 450px;
+        }
+        .contentt h2{
+            font-size: 50px;
+            line-height: 160px;
+            color: transparent;
+            -webkit-text-stroke: 1px #fff;
+            background:url(/Mau-den-va-trang-nen-do-hoa-soc.jpg);
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: backt 20s linear infinite;
+        }
+        @keyframes backt{
+            100%{
+                background-position: 2000px 0;
+            }
+        }
+        .container{
+            width: 100%;
+            margin: 730px 240px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .card{
+            font-size: 25px;
+            font-weight: bold;
+            position:relative;
+            margin: 0px 200px;
+            width: 450px;
+            height: 600px;
+            border-radius: 25px;
+            color:black;
+            background:rgba(233, 225, 225, 0.486);
+            transform-style: preserve-3d;
+            transform: perspective(2000px);
+            transition: 1s;
+            box-shadow: inset 300px 0 50px rgba(0,0,0,0.4);
+        }
+        .card:hover{
+            z-index: 10;
+            transform: perspective(2000px) rotate(-5deg);
+            box-shadow: inset 300px 0 100px rgba(0,0,0,0.4);
+        }
+        .card .imgbox{
+            position: absolute;
+            margin-left: -50%;
+            width: 450px;
+            height: 600px;
+            box-sizing: border-box;
+            z-index: 1;
+            transition: 1s;
+        }
+        .card:hover .imgbox{
+            transform: rotateY(-135deg);
+        }
+       .card .imgbox img{
+           position: relative;
+           top: 0;
+           left: 50%;
+           width: 100%;
+           height: 100%;
+           border-radius: 25px;
+           object-fit: cover;
+       } 
+       .card .details{
+           position:absolute;
+           top: 0;
+           left: 0;
+           box-sizing: border-box;
+           padding: 20px;
+           opacity: 0;
+       }
+       .card .details{
+           opacity: 1;
+       }
+       .card button{
+           /* margin-left: 10%; */
+           height: 75px;
+           width: 155px;
+           margin: 110% 0 0 9%;
+       }
+
+
+       /* Page 3 */
+       .pageb{
+            background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.2)),url(/bg3.png);
+            height: 100vh;
+            width: 100%;
+           background-size: cover;
+           background-position: center;
+       }
+
+
+        /* pageb */
+
+        *{
+            margin: 0;
+            padding: 0;
+        
+        }
+        .pageb body{
+            font-family: 'Lato','Arial',sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgb(32,33,36);
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .containerh{
+            position: relative;
+            width: 1850px;
+            justify-content: space-between;
+            align-items:cebter;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 7%;
+            margin-left: 550px;
+            text-align: center;
+        }
+        .book{
+            position: relative;
+            width: 300px;
+            height: 450px;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        .book-icon .anh{
+            width: 270px;
+            height: 315px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        .writer img{
+            float: left;
+            width: 30px;
+            height: 4px;
+            margin-left: 3px;
+            margin-top: 5px;
+        }
+        .title{
+            color: rgb(202,202,183);
+            font-size: 13px;
+            font-weight: bolder;
+            padding-top: 20px;
+        }
+        .heading{
+            color: white;
+            margin-top: 10px;
+        }
+        .sub-title{
+            color: rgb(226,201,201,0.8);
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .writer p{
+            padding-top:5px ;
+            text-align: left;
+            float: left;
+            color: rgb(255,255,255,0.9);
+            margin-top: 2px;
+        }
+        .writer i{
+            color: rgb(226,201,201,0.8);
+        }
+        .copyright{
+            float: left;
+            padding-top: 5px;
+            margin-left: 28%;
+            color: rgba(233, 222, 222, 0.6);
+            font-size: small;
+        }
+        
+        .front li{
+            background: white;
+            border-radius: 10px;
+        }
+        .back li{
+            background: linear-gradient(to bottom,#4d6e97,#3a405c,#1f1f3b,#282435,#42276b);
+            border-radius: 10px;
+            width: 97.5% !important;
+        
+        }
+        .page>li{
+            background: -webkit-linear-gradient(left,#e1ddd8 0%,#fffbf6 100% );
+            background: linear-gradient(left, #e1ddd8 0%,#fffbf6 100%);
+            box-shadow: inset 0px -1px 2px rgba(50,50,50,0.1),
+                inset -1px 0px 1px rgba(150,150,150,0.2) ;
+                border-radius: 0px 5px 5px 0px;
+                width: 100%;
+                height: 100%;
+                transform-origin: left center;
+                z-index: -1;
+        }
+        .front{
+            transform: rotateY(-34deg) translateZ(8px);
+            z-index: 3;
+        }
+        .back{
+            transform: rotateY(-15deg) translateZ(-8px);
+            z-index: -2;
+        }
+        .page li:nth-child(1){
+            transform: rotateY(-25deg);
+        }
+        .page li:nth-child(2){
+            transform: rotateY(-27deg);
+            background: rgb(228, 220, 207);
+        }
+        .page li:nth-child(3){
+            transform: rotateY(-29deg);
+        }
+        .page li:nth-child(4){
+            transform: rotateY(-30deg);
+        }
+        .page li:nth-child(5){
+            transform: rotateY(-32deg);
+        }
+        .front,
+        .back,
+        .front li,
+        .back li{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+        .front,
+        .back{
+            transform-origin: 0% 100%;
+        }
+        .front{
+            transition: all 0.8s ease, z-index 0.6s;
+        }
+        .front li:last-child{
+            transform: rotateY(180deg) translateZ(2px);
+        }
+        .page,
+        .page > li{
+            position: absolute;
+        }
+        .page{
+            width: 100%;
+            height: 98%;
+            top: 1%;
+            left: 3%;
+        }
+        .page li{
+            transition-duration: 0.6s;
+            z-index: 0;
+        
+        }
+        .page img{
+            height: 100%;
+            width: 98%;
+        }
+        .front img{
+            height: 100%;
+            width: 100%;
+            border-radius: 17px;
+        }
+        .book:hover .front{
+            transform: rotateY(-145deg) translateZ(0);
+        }
+        .book:hover > .page li:nth-child(1){
+            transform: rotateY(-30deg);
+            transition: 1.5s;
+        }
+        .book:hover > .page li:nth-child(2){
+            transform: rotateY(-35deg);
+            transition: 1.8s;
+        }
+        .book:hover > .page li:nth-child(3){
+            transform: rotateY(-118deg);
+            transition: 1.6s;
+        }
+        .book:hover > .page li:nth-child(4){
+            transform: rotateY(-130deg);
+            transition: 1.4s;
+        }
+        .book:hover > .page li:nth-child(5){
+            transform: rotateY(-140deg);
+            transition: 1.2s;
+            
+        }
+        .frontcover{
+            position: absolute;
+            background: linear-gradient(to bottom,#1a1f25,#3a405c,#1f1f3b,#282435,#1b102c);
+            height: 100%;
+            width: 101%;
+            border-radius: 5px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .frontcover h2 {
+            font-size: 40px;
+        }
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            width: 200px;
+            height: 50px;
+            margin-top: 180px;
+            padding: 8px 12px;
+            font-size: 35px;
+            font-weight: bolder;
+            background: rgba(0,0,0,0.3);
+            color: black;
+            border-radius: 4px;
+            box-shadow: -3px -3px 5px 0px #ffffffa6,
+            3px 3px 5px 0px #0000004a;
+            text-align: center;
+            transition: color 0.3s , border-color 0.3s;
+        
+        }
+        .btn:hover{
+            box-shadow: -3px -3px 5px 0px #ffffffa6 inset,
+            3px 3px 5px 0px #0000004a inset;
+            background: #009688;
+            color: #fff;
+        }
+
+
+        .trendh h1{
+            position: absolute;
+            font-size: 90px;
+            display: flex;
+            margin: 25% 0 0 -49%;
+            line-height: 160px;
+            color: transparent;
+            -webkit-text-stroke: 1px #fff;
+            background:url(/Mau-den-va-trang-nen-do-hoa-soc.jpg);
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: backt 20s linear infinite;
+        }
+        @keyframes backt{
+            100%{
+                background-position: 2000px 0;
+            }
+        }
+        
